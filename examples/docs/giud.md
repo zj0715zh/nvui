@@ -24,8 +24,8 @@ npm install nvui --save
 ## 使用
 
 ```js
-import NVUI from 'NVui' // 引入组件库
-import 'nvui/packages/theme-default/lib/index.css' // 引入样式库
+import NVUI from 'nvui' // 引入组件库
+import '../node_modules/nvui/packages/theme-default/lib/index.css' // 引入样式库
 
 Vue.use(NVUI)
 ```

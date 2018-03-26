@@ -25,7 +25,7 @@ export default {
       }],
       link: [{              
         rel: 'asstes',
-        href: 'https://vv-ui.github.io/VV-UI/'
+        href: 'javascript:;'
       }]
     }
   }
