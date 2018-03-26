@@ -1,8 +1,7 @@
-# 介绍
+# NV UI
 
-----
+`NV-UI` 是一款基于 `Vue.js 2.0` 的前端 UI 组件库，主要用于快速开发 H5 网站前端页面
 
-`VV-UI` 是一款基于 `Vue.js 2.0` 的前端 UI 组件库，主要用于快速开发 PC 网站中后台产品
 
 ## 特性
 
@@ -13,10 +12,25 @@
 ## 浏览器支持
 
 - 现代浏览器和 IE9 及以上
-- [Electron](http://electron.atom.io/)
-- [NW.js](http://nwjs.io)
 
+## 安装
+
+- npm 
+
+```bash
+npm install nvui --save
+```
+
+## 使用
+
+```js
+import NVUI from 'NVui' // 引入组件库
+import 'nvui/packages/theme-default/lib/index.css' // 引入样式库
+
+Vue.use(NVUI)
+```
 
 ## 贡献
 
-如果你在使用 `VV-UI` 时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/VV-UI/VV-UI/issues) 或 [Pull Request](https://github.com/VV-UI/VV-UI/pulls)
+如果你在使用 `NV-UI` 时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/zj0715zh/nvui/issues)
+

@@ -10,6 +10,8 @@ Vue.use(NVUI)
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
+// 禁止eslint检查
 new Vue({
   el: '#app',
   router,
