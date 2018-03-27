@@ -1,6 +1,6 @@
 /**
- * @author monkeywang
- * Date: 17/11/20
+ * @author itzou
+ * Date: 18/03/12
  */
 import Skeleton from './src/skeleton.vue'
 

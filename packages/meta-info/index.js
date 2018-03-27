@@ -1,6 +1,6 @@
 /**
- * @author monkeywang
- * Date: 17/11/14
+ * @author itzou
+ * Date: 18/03/12
  */
 import updateMetaInfo from './src/metaOperate/updateMetaInfo'
 import {VUE_META_KEY_NAME} from './src/common/constants'

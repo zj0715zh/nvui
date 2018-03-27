@@ -1,17 +1,17 @@
 {
-  "name": "vv-ui-theme-default",
+  "name": "nv-ui-theme-default",
   "version": "1.0.0",
-  "description": "vv-ui component default theme.",
+  "description": "nv-ui component default theme.",
   "main": "lib/index.css",
   "scripts": {
     "dev": "gulp build && gulp watch",
     "build": "gulp build"
   },
   "keywords": [
-    "vv-ui",
+    "nv-ui",
     "theme"
   ],
-  "author": "monkeywang",
+  "author": "itzou",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
