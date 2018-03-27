@@ -23,11 +23,25 @@ npm install nvui --save
 
 ## 使用
 
+###全局引入
+
 ```js
 import NVUI from 'nvui' // 引入组件库
 import '../node_modules/nvui/packages/theme-default/lib/index.css' // 引入样式库
 
 Vue.use(NVUI)
+```
+
+###按需引入
+
+```js
+import { WButton } from 'nvui'
+
+export default {
+  components: {
+    WButton
+  }
+}
 ```
 
 ## 贡献
