@@ -15,12 +15,11 @@ const webpackConfig = (process.env.NODE_ENV === 'testing' || process.env.NODE_EN
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
 
-// default port where dev server listens for incoming traffic
+//本地服务接口
 const port = process.env.PORT || config.dev.port
-// automatically open browser, if not set will be false
+//启动时是否自动打开浏览器，在linux服务器下可关闭
 const autoOpenBrowser = !!config.dev.autoOpenBrowser
-// Define HTTP proxies to your custom API backend
-// https://github.com/chimurai/http-proxy-middleware
+//接口转发
 const proxyTable = config.dev.proxyTable
 
 const app = express()
@@ -47,7 +46,7 @@ Object.keys(proxyTable).forEach(function (context) {
 })
 
 // 这个会影响express的路由配置，如果要配置express路由就注释掉这行
-app.use(require('connect-history-api-fallback')())
+// app.use(require('connect-history-api-fallback')())
 
 // 本地服务中间件
 app.use(devMiddleware)
