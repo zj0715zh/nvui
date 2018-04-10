@@ -1,8 +1,9 @@
 {
-  "name": "nv-ui-theme-default",
-  "version": "1.0.0",
-  "description": "nv-ui component default theme.",
-  "main": "lib/index.css",
+  "name": "nvui",
+  "version": "1.0.7",
+  "description": "This is a UI components for H5",
+  "author": "itzou <364778792@qq.com>",
+  "main": "packages/index.js",
   "scripts": {
     "dev": "gulp build && gulp watch",
     "build": "gulp build"
