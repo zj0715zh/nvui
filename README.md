@@ -44,6 +44,32 @@ export default {
 }
 ```
 
+## 自定义样式
+
+### 全局安装gulp 
+
+```bash
+npm install gulp -g
+```
+
+### 新增或修改默认样式
+
+用户可在/packages/theme-default/src文件夹下修改和新增组件样式
+
+
+### 执行gulp打包
+
+```bash
+gulp build
+```
+
+### 页面引入相应的样式文件
+
+```js
+import '../node_modules/nvui/packages/theme-default/lib/index.css'
+```
+
+
 ## 贡献
 
 如果你在使用 `NV-UI` 时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/zj0715zh/nvui/issues)
