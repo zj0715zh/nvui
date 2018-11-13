@@ -1,6 +1,6 @@
 {
   "name": "nvui",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "This is a UI components for H5",
   "author": "itzou <364778792@qq.com>",
   "main": "packages/index.js",
