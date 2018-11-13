@@ -1,17 +1,28 @@
-import Vue from 'vue';
+'use strict';
 
-export default function scrollIntoView(container, selected) {
-  if (Vue.prototype.$isServer) return;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = scrollIntoView;
+
+var _vue = require('vue');
+
+var _vue2 = _interopRequireDefault(_vue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function scrollIntoView(container, selected) {
+  if (_vue2.default.prototype.$isServer) return;
 
   if (!selected) {
     container.scrollTop = 0;
     return;
   }
 
-  const top = selected.offsetTop;
-  const bottom = selected.offsetTop + selected.offsetHeight;
-  const viewRectTop = container.scrollTop;
-  const viewRectBottom = viewRectTop + container.clientHeight;
+  var top = selected.offsetTop;
+  var bottom = selected.offsetTop + selected.offsetHeight;
+  var viewRectTop = container.scrollTop;
+  var viewRectBottom = viewRectTop + container.clientHeight;
 
   if (top < viewRectTop) {
     container.scrollTop = top;

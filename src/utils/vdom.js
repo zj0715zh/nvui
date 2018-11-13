@@ -1,9 +1,22 @@
-import { hasOwn } from 'nvui/src/utils/util';
+'use strict';
 
-export function isVNode(node) {
-  return typeof node === 'object' && hasOwn(node, 'componentOptions');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.isVNode = isVNode;
+exports.getFirstComponentChild = getFirstComponentChild;
+
+var _util = require('nvui/src/utils/util');
+
+function isVNode(node) {
+  return (typeof node === 'undefined' ? 'undefined' : _typeof(node)) === 'object' && (0, _util.hasOwn)(node, 'componentOptions');
 };
 
-export function getFirstComponentChild(children) {
-  return children && children.filter(c => c && c.tag)[0];
+function getFirstComponentChild(children) {
+  return children && children.filter(function (c) {
+    return c && c.tag;
+  })[0];
 };

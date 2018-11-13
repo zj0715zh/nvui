@@ -1,4 +1,9 @@
-const SYNC_HOOK_PROP = '$v-sync';
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var SYNC_HOOK_PROP = '$v-sync';
 
 /**
  * v-sync directive
@@ -9,12 +14,12 @@ const SYNC_HOOK_PROP = '$v-sync';
  * If your want to sync component's prop "visible" to context prop "myVisible", use like this:
  *  v-sync:visible="myVisible"
  */
-export default {
-  bind(el, binding, vnode) {
-    const context = vnode.context;
-    const component = vnode.child;
-    const expression = binding.expression;
-    const prop = binding.arg;
+exports.default = {
+  bind: function bind(el, binding, vnode) {
+    var context = vnode.context;
+    var component = vnode.child;
+    var expression = binding.expression;
+    var prop = binding.arg;
 
     if (!expression || !prop) {
       console.warn('v-sync should specify arg & expression, for example: v-sync:visible="myVisible"');
@@ -26,27 +31,29 @@ export default {
       return;
     }
 
-    const unwatchContext = context.$watch(expression, (val) => {
+    var unwatchContext = context.$watch(expression, function (val) {
       component[prop] = val;
     });
 
-    const unwatchComponent = component.$watch(prop, (val) => {
+    var unwatchComponent = component.$watch(prop, function (val) {
       context[expression] = val;
     });
 
     Object.defineProperty(component, SYNC_HOOK_PROP, {
       value: {
-        unwatchContext,
-        unwatchComponent
+        unwatchContext: unwatchContext,
+        unwatchComponent: unwatchComponent
       },
       enumerable: false
     });
   },
-
-  unbind(el, binding, vnode) {
-    const component = vnode.child;
+  unbind: function unbind(el, binding, vnode) {
+    var component = vnode.child;
     if (component && component[SYNC_HOOK_PROP]) {
-      const { unwatchContext, unwatchComponent } = component[SYNC_HOOK_PROP];
+      var _component$SYNC_HOOK_ = component[SYNC_HOOK_PROP],
+          unwatchContext = _component$SYNC_HOOK_.unwatchContext,
+          unwatchComponent = _component$SYNC_HOOK_.unwatchComponent;
+
       unwatchContext && unwatchContext();
       unwatchComponent && unwatchComponent();
     }
